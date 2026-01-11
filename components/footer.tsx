@@ -89,7 +89,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 shrink-0 text-primary" />
-                <a href="mailto:office@tomisevents.ro" className="hover:text-primary transition-colors">office@tomisevents.ro</a>
+                <a href="mailto:office@tomisevents.com" className="hover:text-primary transition-colors">office@tomisevents.com</a>
               </li>
               <li className="flex items-start gap-3">
                  <MapPin className="h-5 w-5 shrink-0 text-primary" />

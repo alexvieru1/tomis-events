@@ -1,5 +1,15 @@
 import CardFlip from "@/components/kokonutui/card-flip";
 import { SERVICII_INTERIOR, SERVICII_EXTERIOR } from "@/lib/services";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Servicii Premium Evenimente",
+  description: "Descoperă gama noastră completă de servicii pentru evenimente în Constanța: mașină fum greu, artificii dansul mirilor, cabină foto, gheață carbonică. Calitate garantată!",
+  keywords: ['servicii nunta constanta', 'inchiriere fum greu', 'artificii nunta', 'cabina foto constanta', 'gheata carbonica', 'lumini arhitecturale'],
+  alternates: {
+    canonical: 'https://tomisevents.com/servicii',
+  },
+};
 
 const Servicii = () => {
   return (
