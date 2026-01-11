@@ -21,15 +21,15 @@ const Footer = () => {
             </p>
             <div className="flex gap-4 mt-2">
               <Link href="https://facebook.com" target="_blank" className="text-zinc-400 hover:text-blue-600 transition-colors">
-                <IconBrandFacebook className="h-5 w-5" />
+                <IconBrandFacebook className="h-10 w-10" />
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link href="https://instagram.com" target="_blank" className="text-zinc-400 hover:text-pink-600 transition-colors">
-                <IconBrandInstagram className="h-5 w-5" />
+                <IconBrandInstagram className="h-10 w-10" />
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link href="https://youtube.com" target="_blank" className="text-zinc-400 hover:text-black transition-colors">
-                <IconBrandTiktok className="h-5 w-5" />
+                <IconBrandTiktok className="h-10 w-10" />
                 <span className="sr-only">YouTube</span>
               </Link>
             </div>
