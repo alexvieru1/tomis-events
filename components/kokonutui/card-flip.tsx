@@ -1,15 +1,5 @@
 "use client";
 
-/**
- * @author: @dorianbaffier
- * @description: Card Flip
- * @version: 1.0.0
- * @date: 2025-06-26
- * @license: MIT
- * @website: https://kokonutui.com
- * @github: https://github.com/kokonut-labs/kokonutui
- */
-
 import { ArrowRight, Repeat2 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -39,24 +29,24 @@ export default function CardFlip({
 
   return (
     <div
-      className="group relative h-[320px] w-full max-w-[280px] [perspective:2000px]"
+      className="group relative h-80 w-full max-w-70 perspective-[2000px]"
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >
       <div
         className={cn(
           "relative h-full w-full",
-          "[transform-style:preserve-3d]",
+          "transform-3d",
           "transition-all duration-700",
           isFlipped
-            ? "[transform:rotateY(180deg)]"
-            : "[transform:rotateY(0deg)]"
+            ? "transform-[rotateY(180deg)]"
+            : "transform-[rotateY(0deg)]"
         )}
       >
         <div
           className={cn(
             "absolute inset-0 h-full w-full",
-            "[backface-visibility:hidden] [transform:rotateY(0deg)]",
+            "backface-hidden transform-[rotateY(0deg)]",
             "overflow-hidden rounded-2xl",
             "bg-zinc-50 dark:bg-zinc-900",
             "border border-zinc-200 dark:border-zinc-800/50",
@@ -66,7 +56,7 @@ export default function CardFlip({
             isFlipped ? "opacity-0" : "opacity-100"
           )}
         >
-          <div className="relative h-full overflow-hidden bg-gradient-to-b from-zinc-100 to-white dark:from-zinc-900 dark:to-black">
+          <div className="relative h-full overflow-hidden bg-linear-to-b from-zinc-100 to-white dark:from-zinc-900 dark:to-black">
             {image ? (
               <div className="absolute inset-0 h-full w-full">
                 <Image
@@ -75,15 +65,15 @@ export default function CardFlip({
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
               </div>
             ) : (
               <div className="absolute inset-0 flex items-start justify-center pt-24">
-                <div className="relative flex h-[100px] w-[200px] items-center justify-center">
+                <div className="relative flex h-25 w-50 items-center justify-center">
                   {[...Array(10)].map((_, i) => (
                     <div
                       className={cn(
-                        "absolute h-[50px] w-[50px]",
+                        "absolute h-12.5 w-12.5",
                         "rounded-[140px]",
                         "animate-[scale_3s_linear_infinite]",
                         "opacity-0",
@@ -106,7 +96,7 @@ export default function CardFlip({
               <div className="space-y-1.5">
                 <h3
                   className={cn(
-                    "font-semibold text-lg leading-snug tracking-tighter transition-all duration-500 ease-out-expo group-hover:translate-y-[-4px]",
+                    "font-semibold text-lg leading-snug tracking-tighter transition-all duration-500 ease-out-expo group-hover:-translate-y-1",
                     image
                       ? "text-white"
                       : "text-zinc-900 dark:text-white"
@@ -117,7 +107,7 @@ export default function CardFlip({
                 {subtitle && (
                   <p
                     className={cn(
-                      "line-clamp-2 text-sm tracking-tight transition-all delay-[50ms] duration-500 ease-out-expo group-hover:translate-y-[-4px]",
+                      "line-clamp-2 text-sm tracking-tight transition-all delay-[50ms] duration-500 ease-out-expo group-hover:-translate-y-1",
                       image
                         ? "text-zinc-200"
                         : "text-zinc-600 dark:text-zinc-200"
@@ -131,8 +121,8 @@ export default function CardFlip({
                 {image ? null : (
                     <div
                     className={cn(
-                        "absolute inset-[-8px] rounded-lg transition-opacity duration-300",
-                        "bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent"
+                        "absolute -inset-2 rounded-lg transition-opacity duration-300",
+                        "bg-linear-to-br from-orange-500/20 via-orange-500/10 to-transparent"
                     )}
                     />
                 )}
@@ -151,9 +141,9 @@ export default function CardFlip({
         <div
           className={cn(
             "absolute inset-0 h-full w-full",
-            "[backface-visibility:hidden] [transform:rotateY(180deg)]",
+            "backface-hidden transform-[rotateY(180deg)]",
             "rounded-2xl p-6",
-            "bg-gradient-to-b from-zinc-100 to-white dark:from-zinc-900 dark:to-black",
+            "bg-linear-to-b from-zinc-100 to-white dark:from-zinc-900 dark:to-black",
             "border border-zinc-200 dark:border-zinc-800",
             "shadow-xs dark:shadow-lg",
             "flex flex-col",
@@ -164,12 +154,12 @@ export default function CardFlip({
         >
           <div className="flex-1 space-y-6">
             <div className="space-y-2">
-              <h3 className="font-semibold text-lg text-zinc-900 leading-snug tracking-tight transition-all duration-500 ease-out-expo group-hover:translate-y-[-2px] dark:text-white">
+              <h3 className="font-semibold text-lg text-zinc-900 leading-snug tracking-tight transition-all duration-500 ease-out-expo group-hover:-translate-y-0.5 dark:text-white">
                 {title}
               </h3>
               <p
                 className={cn(
-                  "text-sm text-zinc-600 tracking-tight transition-all duration-500 ease-out-expo group-hover:translate-y-[-2px] dark:text-zinc-400",
+                  "text-sm text-zinc-600 tracking-tight transition-all duration-500 ease-out-expo group-hover:-translate-y-0.5 dark:text-zinc-400",
                   features.length > 0 ? "line-clamp-2" : ""
                 )}
               >
@@ -180,7 +170,7 @@ export default function CardFlip({
             <div className="space-y-2">
               {features.map((feature, index) => (
                 <div
-                  className="flex items-center gap-2 text-sm text-zinc-700 transition-all duration-500 dark:text-zinc-300"
+                  className="flex items-center gap-2 text-sm text-[#E81ADE] transition-all duration-500 dark:text-zinc-300"
                   key={feature}
                   style={{
                     transform: isFlipped
@@ -190,7 +180,7 @@ export default function CardFlip({
                     transitionDelay: `${index * 100 + 200}ms`,
                   }}
                 >
-                  <ArrowRight className="h-3 w-3 text-orange-500" />
+                  <ArrowRight className="h-3 w-3 text-[#E81ADE]" />
                   <span>{feature}</span>
                 </div>
               ))}
@@ -206,7 +196,7 @@ export default function CardFlip({
                     "flex items-center justify-between",
                     "-m-3 rounded-xl p-3",
                     "transition-all duration-300",
-                    "bg-gradient-to-r from-zinc-100 via-zinc-100 to-zinc-100",
+                    "bg-linear-to-r from-zinc-100 via-zinc-100 to-zinc-100",
                     "dark:from-zinc-800 dark:via-zinc-800 dark:to-zinc-800",
                     "hover:from-0% hover:from-orange-500/10 hover:via-100% hover:via-orange-500/5 hover:to-100% hover:to-transparent",
                     "dark:hover:from-0% dark:hover:from-orange-500/20 dark:hover:via-100% dark:hover:via-orange-500/10 dark:hover:to-100% dark:hover:to-transparent",
@@ -219,8 +209,8 @@ export default function CardFlip({
                   <div className="group/icon relative">
                     <div
                       className={cn(
-                        "absolute inset-[-6px] rounded-lg transition-all duration-300",
-                        "bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent",
+                        "absolute -inset-1.5 rounded-lg transition-all duration-300",
+                        "bg-linear-to-br from-orange-500/20 via-orange-500/10 to-transparent",
                         "scale-90 opacity-0 group-hover/start:scale-100 group-hover/start:opacity-100"
                       )}
                     />
@@ -235,7 +225,7 @@ export default function CardFlip({
                   "flex items-center justify-between",
                   "-m-3 rounded-xl p-3",
                   "transition-all duration-300",
-                  "bg-gradient-to-r from-zinc-100 via-zinc-100 to-zinc-100",
+                  "bg-linear-to-r from-zinc-100 via-zinc-100 to-zinc-100",
                   "dark:from-zinc-800 dark:via-zinc-800 dark:to-zinc-800",
                   "hover:from-0% hover:from-orange-500/10 hover:via-100% hover:via-orange-500/5 hover:to-100% hover:to-transparent",
                   "dark:hover:from-0% dark:hover:from-orange-500/20 dark:hover:via-100% dark:hover:via-orange-500/10 dark:hover:to-100% dark:hover:to-transparent",
@@ -248,8 +238,8 @@ export default function CardFlip({
                 <div className="group/icon relative">
                   <div
                     className={cn(
-                      "absolute inset-[-6px] rounded-lg transition-all duration-300",
-                      "bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent",
+                      "absolute -inset-1.5 rounded-lg transition-all duration-300",
+                      "bg-linear-to-br from-orange-500/20 via-orange-500/10 to-transparent",
                       "scale-90 opacity-0 group-hover/start:scale-100 group-hover/start:opacity-100"
                     )}
                   />

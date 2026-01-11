@@ -37,7 +37,7 @@ const AboutSection = () => {
             },
           }}
         >
-          <div className="relative aspect-[9/16] overflow-hidden rounded-2xl">
+          <div className="relative aspect-9/16 overflow-hidden rounded-2xl">
             <Image
               src="/images/artificii-exterior.webp"
               alt="Artificii exterior"
@@ -45,7 +45,7 @@ const AboutSection = () => {
               className="object-cover transition-transform duration-500 hover:scale-110"
             />
           </div>
-          <div className="relative aspect-[9/16] overflow-hidden rounded-2xl">
+          <div className="relative aspect-9/16 overflow-hidden rounded-2xl">
             <Image
               src="/images/artificii-zi.webp"
               alt="Artificii zi"
@@ -53,7 +53,7 @@ const AboutSection = () => {
               className="object-cover transition-transform duration-500 hover:scale-110"
             />
           </div>
-          <div className="relative col-span-2 aspect-[9/16] overflow-hidden rounded-2xl">
+          <div className="relative col-span-2 aspect-9/16 overflow-hidden rounded-2xl">
             <Image
               src="/images/valsul-mirilor.webp"
               alt="Valsul mirilor"
@@ -61,7 +61,7 @@ const AboutSection = () => {
               className="object-cover transition-transform duration-500 hover:scale-110"
             />
           </div>
-          <div className="relative aspect-[9/16] overflow-hidden rounded-2xl">
+          <div className="relative aspect-9/16 overflow-hidden rounded-2xl">
             <Image
               src="/images/artificii-exterior-2.webp"
               alt="Artificii exterior"

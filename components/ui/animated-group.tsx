@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/static-components */
 'use client';
 import { ReactNode } from 'react';
 import { motion, Variants } from 'motion/react';
@@ -100,6 +101,7 @@ const addDefaultVariants = (variants: Variants) => ({
   visible: { ...defaultItemVariants.visible, ...variants.visible },
 });
 
+ 
 function AnimatedGroup({
   children,
   className,
@@ -116,11 +118,12 @@ function AnimatedGroup({
   const itemVariants = variants?.item || selectedVariants.item;
 
   const MotionComponent = React.useMemo(
-    () => motion.create(as as keyof JSX.IntrinsicElements),
+    () => motion.create(as as React.ElementType),
     [as]
   );
+  
   const MotionChild = React.useMemo(
-    () => motion.create(asChild as keyof JSX.IntrinsicElements),
+    () => motion.create(asChild as React.ElementType),
     [asChild]
   );
 

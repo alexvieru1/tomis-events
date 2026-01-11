@@ -62,13 +62,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-foreground">Servicii Populare</h3>
             <ul className="flex flex-col gap-3 text-sm text-zinc-500">
               <li>
-                <Link href="/servicii" className="hover:text-primary transition-colors">Mașină Fum Greu</Link>
+                <Link href="/servicii" className="hover:text-primary transition-colors">Artificii Exterior</Link>
+              </li>
+              <li>
+                <Link href="/servicii" className="hover:text-primary transition-colors">Fum Greu</Link>
               </li>
               <li>
                 <Link href="/servicii" className="hover:text-primary transition-colors">Artificii Dansul Mirilor</Link>
-              </li>
-              <li>
-                <Link href="/servicii" className="hover:text-primary transition-colors">Cabină Foto</Link>
               </li>
               <li>
                 <Link href="/servicii" className="hover:text-primary transition-colors">Gheață Carbonică</Link>
