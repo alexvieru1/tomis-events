@@ -90,6 +90,14 @@ export function InfiniteSlider({
           setIsTransitioning(true);
           setCurrentSpeed(speed);
         },
+        onFocus: () => {
+          setIsTransitioning(true);
+          setCurrentSpeed(speedOnHover);
+        },
+        onBlur: () => {
+          setIsTransitioning(true);
+          setCurrentSpeed(speed);
+        },
       }
     : {};
 
