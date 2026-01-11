@@ -31,6 +31,9 @@ export function InfiniteSlider({
 
   useEffect(() => {
     let controls;
+    
+    if (currentSpeed <= 0) return;
+
     const size = direction === 'horizontal' ? width : height;
     const contentSize = size + gap;
     const from = reverse ? -contentSize / 2 : 0;
@@ -77,7 +80,7 @@ export function InfiniteSlider({
     reverse,
   ]);
 
-  const hoverProps = speedOnHover
+  const hoverProps = speedOnHover !== undefined
     ? {
         onHoverStart: () => {
           setIsTransitioning(true);

@@ -1,6 +1,79 @@
+import Image from "next/image";
 import { InfiniteSlider } from "./ui/infinite-slider"
 import { ProgressiveBlur } from "./ui/progressive-blur"
 
+const LOGOS = [
+    {
+        name: "Breeze Mamaia",
+        url: "/images/clienti/breeze-mamaia.webp",
+        className: "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
+        width: 262,
+        height: 180
+    },
+    {
+        name: "Hotel Iaki",
+        url: "/images/clienti/hotel-iaki.webp",
+        className: "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
+        width: 262,
+        height: 180
+    },
+    {
+        name: "Loft Mamaia",
+        url: "/images/clienti/loft-mamaia.webp",
+        className: "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
+        width: 262,
+        height: 180
+    },
+    {
+        name: "Phoenicia Holiday Resort",
+        url: "/images/clienti/phoenicia-holiday-resort.webp",
+        className: "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
+        width: 262,
+        height: 180
+    },
+    {
+        name: "Primăria Cernavodă",
+        url: "/images/clienti/primaria-cernavoda.webp",
+        className: "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
+        width: 262,
+        height: 180
+    },
+    {
+        name: "Primăria Mangalia",
+        url: "/images/clienti/primaria-mangalia.webp",
+        className: "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
+        width: 262,
+        height: 180
+    },
+    {
+        name: "Primăria Murfatlar",
+        url: "/images/clienti/primaria-murfatlar.webp",
+        className: "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
+        width: 262,
+        height: 180
+    },
+    {
+        name: "Primăria Năvodari",
+        url: "/images/clienti/primaria-navodari.webp",
+        className: "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
+        width: 262,
+        height: 180
+    },
+    {
+        name: "Reyna",
+        url: "/images/clienti/reyna.webp",
+        className: "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
+        width: 262,
+        height: 180
+    },
+    {
+        name: "La Scoica",
+        url: "/images/clienti/scoica.webp",
+        className: "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
+        width: 262,
+        height: 180
+    }
+];
 
 export const LogoCloud = () => {
     return (
@@ -8,87 +81,27 @@ export const LogoCloud = () => {
             <div className="group relative m-auto max-w-6xl px-6">
                 <div className="flex flex-col items-center md:flex-row">
                     <div className="inline md:max-w-44 md:border-r md:pr-6">
-                        <p className="text-end text-sm">Powering the best teams</p>
+                        <p className="text-end text-sm">Locații care au avut încredere în noi</p>
                     </div>
                     <div className="relative py-6 md:w-[calc(100%-11rem)]">
                         <InfiniteSlider
-                            speedOnHover={20}
+                            speedOnHover={0}
                             speed={40}
                             gap={112}>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/nvidia.svg"
-                                    alt="Nvidia Logo"
-                                    height="20"
-                                    width="auto"
-                                />
-                            </div>
-
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/column.svg"
-                                    alt="Column Logo"
-                                    height="16"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/github.svg"
-                                    alt="GitHub Logo"
-                                    height="16"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/nike.svg"
-                                    alt="Nike Logo"
-                                    height="20"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-                                    alt="Lemon Squeezy Logo"
-                                    height="20"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/laravel.svg"
-                                    alt="Laravel Logo"
-                                    height="16"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-7 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/lilly.svg"
-                                    alt="Lilly Logo"
-                                    height="28"
-                                    width="auto"
-                                />
-                            </div>
-
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-6 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/openai.svg"
-                                    alt="OpenAI Logo"
-                                    height="24"
-                                    width="auto"
-                                />
-                            </div>
+                            {LOGOS.map((logo, idx) => (
+                                <div key={idx} className="group/logo relative flex items-center justify-center">
+                                    <Image
+                                        className={`mx-auto w-fit dark:invert transition-opacity duration-300 group-hover/logo:opacity-0 ${logo.className}`}
+                                        src={logo.url}
+                                        alt={`${logo.name}`}
+                                        height={logo.height}
+                                        width={logo.width}
+                                    />
+                                    <span className="absolute inset-0 flex items-center justify-center text-sm font-semibold opacity-0 transition-opacity duration-300 group-hover/logo:opacity-100 whitespace-nowrap">
+                                        {logo.name}
+                                    </span>
+                                </div>
+                            ))}
                         </InfiniteSlider>
 
                         <div className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20"></div>
