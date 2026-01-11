@@ -35,7 +35,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
       >
         <WebsiteNavbar />
-        <div className="pt-44">{children}</div>
+        <div className="pt-24">{children}</div>
         <Footer />
       </body>
     </html>

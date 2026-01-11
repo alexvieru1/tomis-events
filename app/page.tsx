@@ -4,7 +4,7 @@ import { LogoCloud } from "@/components/logo-cloud";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-hidden">
       <HeroSection />
       <AboutSection />
       <LogoCloud />
