@@ -25,7 +25,7 @@ export const SERVICII_INTERIOR: Serviciu[] = [
     title: "Tunuri cu Confetti",
     href: "/servicii-interior/tunuri-confetti",
     descriere: "Explozii de culori și texturi care marchează momentele culminante ale serii tale.",
-    img: "/images/placeholder/tunuri-confetti.jpg",
+    img: "/images/servicii/tunuri-confetti.webp",
     subCategories: ["Confetti metalizate sau hârtie", "Culori personalizabile", "Curățare ușoară"],
   },
   {
@@ -67,7 +67,7 @@ export const SERVICII_INTERIOR: Serviciu[] = [
     title: "Masina de Zapada",
     href: "/servicii-interior/masina-zapada",
     descriere: "Atmosferă magică de iarnă, indiferent de anotimp, cu fulgi artificiali.",
-    img: "/images/servicii/masina-zapada.webp",
+    img: "/images/servicii/masina-de-zapada.webp",
     subCategories: ["Zăpadă non-toxică", "Nu lasă urme/nu alunecă", "Debit reglabil"],
   },
   {
@@ -126,7 +126,7 @@ export const SERVICII_EXTERIOR: Serviciu[] = [
     title: "Torte cu Artificii Reci",
     href: "/servicii-exterior/torte-artificii-reci",
     descriere: "Intrare triumfală sau delimitarea spațiului cu torțe sigure.",
-    img: "/images/placeholder/torte-artificii-reci.jpg",
+    img: "/images/servicii/torte-artificii-reci.webp",
     subCategories: ["Culoar de primire", "Flacără rece (sigură)", "Aspect premium"],
   },
   {
@@ -147,7 +147,7 @@ export const SERVICII_EXTERIOR: Serviciu[] = [
     title: "Cascadă de Vulcani",
     href: "/servicii-exterior/cascada-vulcani",
     descriere: "Un perete impresionant de scântei strălucitoare care curg uniform.",
-    img: "/images/placeholder/cascada-vulcani.jpg",
+    img: "/images/servicii/cascada-vulcani.webp",
     subCategories: ["Lățime variabilă (3-10m)", "Efect de perete de foc", "Durată extinsă"],
   },
 ];
