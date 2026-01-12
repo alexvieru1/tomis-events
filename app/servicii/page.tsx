@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 
 const Servicii = () => {
   return (
-    <div className="container mx-auto px-4">
-      <h1 className="mb-12 text-center font-heading text-4xl font-bold md:text-5xl">
+    <div className="container mx-auto px-4 py-16 md:py-32">
+      <h1 className="mb-12 text-center font-heading text-4xl font-semibold text-[#E81ADE] md:text-5xl">
         Serviciile Noastre
       </h1>
 
       <div className="mb-16">
-        <h2 className="mb-8 font-heading text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+        <h2 className="mb-8 font-heading text-2xl font-semibold text-neutral-800 dark:text-neutral-200">
           Servicii Interior
         </h2>
         <div className="flex flex-wrap justify-center gap-8">
@@ -37,7 +37,7 @@ const Servicii = () => {
       </div>
 
       <div>
-        <h2 className="mb-8 font-heading text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+        <h2 className="mb-8 font-heading text-2xl font-semibold text-neutral-800 dark:text-neutral-200">
           Servicii Exterior
         </h2>
         <div className="flex flex-wrap justify-center gap-8">

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from "next";
+import Packages from '@/components/packages';
 
 export const metadata: Metadata = {
   title: "Pachete Evenimente & Oferte Speciale",
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
 
 const Pachete = () => {
   return (
-    <div>Pachete</div>
+    <div>
+      <Packages/>
+    </div>
   )
 }
 

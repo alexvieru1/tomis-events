@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col overflow-hidden">
+    <div className="flex flex-col overflow-hidden py-16 md:py-32">
       <HeroSection />
       <AboutSection />
       <LogoCloud />

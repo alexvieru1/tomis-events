@@ -198,23 +198,23 @@ export default function CardFlip({
                     "transition-all duration-300",
                     "bg-linear-to-r from-zinc-100 via-zinc-100 to-zinc-100",
                     "dark:from-zinc-800 dark:via-zinc-800 dark:to-zinc-800",
-                    "hover:from-0% hover:from-orange-500/10 hover:via-100% hover:via-orange-500/5 hover:to-100% hover:to-transparent",
-                    "dark:hover:from-0% dark:hover:from-orange-500/20 dark:hover:via-100% dark:hover:via-orange-500/10 dark:hover:to-100% dark:hover:to-transparent",
+                    "hover:from-0% hover:from-[#E81ADE]/10 hover:via-100% hover:via-[#E81ADE]/5 hover:to-100% hover:to-transparent",
+                    "dark:hover:from-0% dark:hover:from-[#E81ADE]/20 dark:hover:via-100% dark:hover:via-[#E81ADE]/10 dark:hover:to-100% dark:hover:to-transparent",
                     "hover:scale-[1.02] hover:cursor-pointer"
                   )}
                 >
-                  <span className="font-medium text-sm text-zinc-900 transition-colors duration-300 group-hover/start:text-orange-600 dark:text-white dark:group-hover/start:text-orange-400">
+                  <span className="font-medium text-sm text-zinc-900 transition-colors duration-300 group-hover/start:text-[#E81ADE] dark:text-white dark:group-hover/start:text-[#E81ADE]">
                     {actionText}
                   </span>
                   <div className="group/icon relative">
                     <div
                       className={cn(
                         "absolute -inset-1.5 rounded-lg transition-all duration-300",
-                        "bg-linear-to-br from-orange-500/20 via-orange-500/10 to-transparent",
+                        "bg-linear-to-br from-[#E81ADE]/20 via-[#E81ADE]/10 to-transparent",
                         "scale-90 opacity-0 group-hover/start:scale-100 group-hover/start:opacity-100"
                       )}
                     />
-                    <ArrowRight className="relative z-10 h-4 w-4 text-orange-500 transition-all duration-300 group-hover/start:translate-x-0.5 group-hover/start:scale-110" />
+                    <ArrowRight className="relative z-10 h-4 w-4 text-[#E81ADE] transition-all duration-300 group-hover/start:translate-x-0.5 group-hover/start:scale-110" />
                   </div>
                 </div>
               </Link>

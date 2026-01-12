@@ -124,7 +124,7 @@ export const LogoCloud = () => {
         <div className="flex flex-col items-center md:flex-row">
           <div className="inline md:max-w-44 md:border-r md:pr-6">
             <p className="text-end text-sm">
-              Locații care au avut încredere în noi
+              Locații care au încredere în noi
             </p>
           </div>
           <div className="relative py-6 md:w-[calc(100%-11rem)]">
