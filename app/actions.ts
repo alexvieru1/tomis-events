@@ -21,7 +21,7 @@ export async function sendContactEmail(formData: FormData) {
       // IMPORTANT: Until you verify your domain on Resend, you must use 'onboarding@resend.dev'
       // Once verified, change this to 'contact@tomisevents.com' or similar
       from: 'Tomis Events Contact <onboarding@resend.dev>', 
-      to: ['programari@tomisevents.com'], 
+      to: ['office@tomisevents.com'], 
       replyTo: email,
       subject: `Mesaj nou de la ${name} - Tomis Events`,
       text: `
