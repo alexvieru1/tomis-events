@@ -2,45 +2,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Check } from 'lucide-react'
-
-const packages = [
-    {
-        name: 'Silver',
-        description: 'Perfect pentru petreceri private și evenimente restrânse',
-        features: [
-            'Exemplu 1',
-            'Exemplu 2',
-            'Exemplu 3',
-            'Exemplu 4',
-            'Exemplu 5'
-        ],
-        isPopular: false
-    },
-    {
-        name: 'Gold',
-        description: 'Pachetul ideal pentru nunți și botezuri memorabile',
-        features: [
-            'Exemplu 1',
-            'Exemplu 2',
-            'Exemplu 3',
-            'Exemplu 4',
-            'Exemplu 5'
-        ],
-        isPopular: true
-    },
-    {
-        name: 'Platinum',
-        description: 'Experiența completă pentru evenimente de lux',
-        features: [
-            'Exemplu 1',
-            'Exemplu 2',
-            'Exemplu 3',
-            'Exemplu 4',
-            'Exemplu 5'
-        ],
-        isPopular: false
-    }
-]
+import { packages } from '@/lib/packages'
 
 export default function Packages() {
     return (
@@ -53,12 +15,12 @@ export default function Packages() {
                     </p>
                 </div>
 
-                <div className="mt-8 grid gap-6 md:mt-20 md:grid-cols-3">
+                <div className="mt-8 flex flex-wrap justify-center gap-6 md:mt-20">
                     {packages.map((pkg, index) => (
-                        <Card key={index} className={`flex flex-col ${pkg.isPopular ? 'relative border-[#E81ADE] shadow-lg' : ''}`}>
+                        <Card key={index} className={`flex flex-col w-full md:w-[calc((100%-3rem)/3)] ${pkg.isPopular ? 'relative border-[#E81ADE] shadow-lg' : ''}`}>
                             {pkg.isPopular && (
                                 <span className="bg-[#E81ADE] absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full px-3 py-1 text-xs font-medium text-primary-foreground">
-                                    Cel mai popular
+                                    Popular
                                 </span>
                             )}
 
