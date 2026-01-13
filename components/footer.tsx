@@ -12,14 +12,21 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand Column */}
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-2">
-               <Image src="/images/logo.png" alt="Tomis Events Logo" width={150} height={40} />
-            </Link>
-            <p className="text-sm text-zinc-500 leading-relaxed max-w-xs">
-              Transformăm evenimentele obișnuite în amintiri extraordinare. 
-              Peste 20 de ani de experiență în crearea momentelor magice în Constanța și împrejurimi.
-            </p>
-            <div className="flex gap-4 mt-2">
+            <div className="flex items-center gap-4">
+              <Link href="/" className="shrink-0">
+                <Image 
+                  src="/images/logo.png" 
+                  alt="Tomis Events Logo" 
+                  width={60} 
+                  height={60} 
+                  className="w-16 h-auto"
+                />
+              </Link>
+              <p className="text-sm text-zinc-500 leading-relaxed">
+                Peste 20 de ani de experiență în crearea momentelor magice în Constanța și împrejurimi.
+              </p>
+            </div>
+            <div className="flex justify-center items-center gap-4 mt-2">
               <Link href="https://facebook.com" target="_blank" className="text-zinc-400 hover:text-blue-600 transition-colors">
                 <IconBrandFacebook className="h-10 w-10" />
                 <span className="sr-only">Facebook</span>
@@ -36,7 +43,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Column */}
-          <div>
+          <div className='lg:ml-20'>
             <h3 className="text-lg font-semibold mb-4 text-foreground">Navigație</h3>
             <ul className="flex flex-col gap-3 text-sm text-zinc-500">
               <li>
@@ -80,7 +87,7 @@ const Footer = () => {
            <div>
             <h3 className="text-lg font-semibold mb-4 text-foreground">Contact</h3>
             <ul className="flex flex-col gap-4 text-sm text-zinc-500">
-              <li className="flex items-start gap-3">
+              <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 shrink-0 text-primary" />
                 <div className="flex flex-col">
                     <span>Pentru rezervări:</span>
