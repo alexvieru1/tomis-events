@@ -99,7 +99,6 @@ export const SERVICII_INTERIOR: Serviciu[] = [
     about: "Un efect de ultimă generație care combină fragilitatea baloanelor de săpun cu misterul fumului. La spargere, aceste baloane eliberează un mic nor de ceață, creând o scenă interactivă și ludică. Este un serviciu extrem de apreciat atât de copii, cât și de adulți, oferind un farmec aparte ringului de dans.",
     img: "/images/servicii/masina-baloane-fum.webp",
     subCategories: [
-      "Baloane cu heliu sau aer",
       "Efect de ceață la spargere",
       "Luminat LED inclus",
     ],
