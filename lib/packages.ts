@@ -59,15 +59,14 @@ export const packages: Pachet[] = [
         isPopular: false
     },
     {
-        name: 'Pachet Outdoor Celebration',
+        name: 'Pachet Gender Reveal',
         description: 'Creat special pentru primirea invitaților și momentele festive desfășurate în aer liber pe timpul zilei.',
         features: [
             'Artificii de zi',
             'Două extinctoare colorate',
             'Două fumigene',
             'Decor baloane',
-            'Artificii exterior'
-        ],
+         ],
         isPopular: false
     },
     {
