@@ -4,6 +4,7 @@ export interface Serviciu {
   descriere: string;
   about?: string;
   img: string;
+  images?: string[];
   subCategories: string[];
 }
 
@@ -50,6 +51,12 @@ export const SERVICII_INTERIOR: Serviciu[] = [
     descriere: "Vulcani de scântei reci, siguri pentru interior, pentru un decor luminos.",
     about: "Vulcanii de interior oferă strălucirea artificiilor clasice într-un format complet sigur pentru spații închise. Tehnologia scânteilor reci permite utilizarea lor în apropierea persoanelor fără riscuri. Sunt folosiți de obicei pentru a marca începutul și finalul valsului, creând un decor de o eleganță rară și un impact vizual puternic în fotografii.",
     img: "/images/servicii/artificii-ring.webp",
+    images: [
+      "/images/servicii/carusel/artificii-ring-1.webp",
+      "/images/servicii/carusel/artificii-ring-2.webp",
+      "/images/servicii/carusel/artificii-ring-3.webp",
+      "/images/servicii/carusel/artificii-ring-4.webp",
+    ],
     subCategories: [
       "4 sau 6 vulcani",
       "Sigure pentru interior",
@@ -160,6 +167,17 @@ export const SERVICII_EXTERIOR: Serviciu[] = [
     descriere: "Spectacol pirotehnic grandios pe cer, personalizat pentru eveniment.",
     about: "Transformă finalul evenimentului tău într-un moment cu adevărat magic cu un spectacol profesionist de artificii de exterior. Echipa noastră de pirotehniști autorizați creează show-uri personalizate, sincronizate perfect cu muzica aleasă de tine. Ne ocupăm de obținerea tuturor avizelor și autorizațiilor necesare, oferind o experiență vizuală sigură și de neuitat pe cerul nopții.",
     img: "/images/servicii/artificii-exterior.webp",
+    images: [
+      "/images/servicii/carusel/artificii-exterior-1.webp",
+      "/images/servicii/carusel/artificii-exterior-2.webp",
+      "/images/servicii/carusel/artificii-exterior-3.webp",
+      "/images/servicii/carusel/artificii-exterior-4.webp",
+      "/images/servicii/carusel/artificii-exterior-5.webp",
+      "/images/servicii/carusel/artificii-exterior-6.webp",
+      "/images/servicii/carusel/artificii-exterior-7.webp",
+      "/images/servicii/carusel/artificii-exterior-8.webp",
+      "/images/servicii/carusel/artificii-exterior-9.webp",
+    ],
     subCategories: [
       "Pachete 3-10 minute",
       "Sincronizare pe muzică",

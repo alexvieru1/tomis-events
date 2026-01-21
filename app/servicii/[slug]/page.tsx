@@ -6,6 +6,13 @@ import Link from 'next/link';
 import { Check } from 'lucide-react';
 import { SERVICII_INTERIOR, SERVICII_EXTERIOR, Serviciu } from '@/lib/services';
 import { Metadata } from 'next';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 interface ServicePageProps {
   params: Promise<{
@@ -44,7 +51,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
   }
 
   return (
-    <main className="min-h-screen pt-24 pb-16">
+    <main className="min-h-screen lg:pt-10 pb-16">
       <div className="container mx-auto px-6">
         {/* Breadcrumb / Back Link */}
         <div className="mb-8">
@@ -54,15 +61,37 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left Column: Image */}
-          <div className="relative aspect-video lg:aspect-square w-full overflow-hidden rounded-2xl shadow-xl">
-            <Image
-              src={service.img}
-              alt={service.title}
-              fill
-              className="object-cover"
-              priority
-            />
+          {/* Left Column: Image or Carousel */}
+          <div className="relative aspect-video lg:aspect-square w-full overflow-hidden rounded-2xl shadow-xl bg-muted">
+            {service.images && service.images.length > 0 ? (
+              <Carousel className="w-full h-full">
+                <CarouselContent className="-ml-0 h-full">
+                  {service.images.map((imageSrc, index) => (
+                    <CarouselItem key={index} className="pl-0 h-full relative basis-full">
+                       <div className="relative w-full h-full"> {/* Wrapper to ensure Image fills this specific slide */}
+                        <Image
+                          src={imageSrc}
+                          alt={`${service.title} - imagine ${index + 1}`}
+                          fill
+                          className="object-cover"
+                          priority={index === 0}
+                        />
+                       </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
+                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
+              </Carousel>
+            ) : (
+              <Image
+                src={service.img}
+                alt={service.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            )}
           </div>
 
           {/* Right Column: Content */}
