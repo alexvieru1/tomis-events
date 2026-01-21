@@ -140,6 +140,12 @@ export const SERVICII_INTERIOR: Serviciu[] = [
     descriere: "Echipamente profesionale care transformă radical atmosfera locației.",
     about: "Iluminatul este cheia oricărui eveniment reușit. Oferim structuri complete de lumini, dotate cu Moving Heads și proiectoare arhitecturale, controlate în timp real de un tehnician. De la lumini calde pentru cină, până la jocuri dinamice pentru party, scena de lumini asigură energia necesară pentru a ține invitații pe ringul de dans.",
     img: "/images/servicii/scena-lumini.webp",
+    images: [
+      "/images/servicii/carusel/scena-lumini-1.webp",
+      "/images/servicii/carusel/scena-lumini-2.webp",
+      "/images/servicii/carusel/scena-lumini-3.webp",
+      "/images/servicii/carusel/scena-lumini-4.webp",
+    ],
     subCategories: [
       "Moving Heads",
       "Proiectoare arhitecturale",
