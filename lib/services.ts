@@ -132,7 +132,7 @@ export const SERVICII_INTERIOR: Serviciu[] = [
     href: "/servicii/scena-lumini",
     descriere: "Echipamente profesionale care transformă radical atmosfera locației.",
     about: "Iluminatul este cheia oricărui eveniment reușit. Oferim structuri complete de lumini, dotate cu Moving Heads și proiectoare arhitecturale, controlate în timp real de un tehnician. De la lumini calde pentru cină, până la jocuri dinamice pentru party, scena de lumini asigură energia necesară pentru a ține invitații pe ringul de dans.",
-    img: "/images/placeholder/scena-lumini.jpg",
+    img: "/images/servicii/scena-lumini.webp",
     subCategories: [
       "Moving Heads",
       "Proiectoare arhitecturale",
@@ -144,7 +144,7 @@ export const SERVICII_INTERIOR: Serviciu[] = [
     href: "/servicii/ecran-led-fullhd",
     descriere: "Suport vizual de înaltă claritate pentru proiecția amintirilor voastre.",
     about: "Ecranele LED profesionale oferă o claritate net superioară proiectoarelor clasice, fiind vizibile chiar și în lumină puternică. Sunt soluția ideală pentru proiecția videoclipurilor 'Save the Date', a fotografiilor de familie sau pentru a oferi un background vizual spectaculos trupei sau DJ-ului. Configurația modulară ne permite să adaptăm dimensiunea ecranului în funcție de locație.",
-    img: "/images/placeholder/ecran-led-fullhd.jpg",
+    img: "/images/servicii/ecran-led-fullhd.webp",
     subCategories: [
       "Pitch mic pentru claritate",
       "Configurații modulare",
