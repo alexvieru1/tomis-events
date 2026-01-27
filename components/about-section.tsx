@@ -63,7 +63,7 @@ const AboutSection = () => {
           </div>
           <div className="relative aspect-9/16 overflow-hidden rounded-2xl">
             <Image
-              src="https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/artificii-exterior-2.webp"
+              src="https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/artificii-exterior-2.webp"
               alt="Artificii exterior"
               fill
               className="object-cover transition-transform duration-500 hover:scale-110"
