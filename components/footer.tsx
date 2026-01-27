@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <Link href="/" className="shrink-0">
                 <Image 
-                  src="/images/logo.png" 
+                  src="https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/logo.png" 
                   alt="Tomis Events Logo" 
                   width={60} 
                   height={60} 

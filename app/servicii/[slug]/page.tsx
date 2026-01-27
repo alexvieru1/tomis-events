@@ -13,6 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { VideoPlayer } from '@/components/video-player';
 
 interface ServicePageProps {
   params: Promise<{
@@ -61,37 +62,51 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left Column: Image or Carousel */}
-          <div className="relative aspect-video lg:aspect-square w-full overflow-hidden rounded-2xl shadow-xl bg-muted">
-            {service.images && service.images.length > 0 ? (
-              <Carousel className="w-full h-full">
-                <CarouselContent className="-ml-0 h-full">
-                  {service.images.map((imageSrc, index) => (
-                    <CarouselItem key={index} className="pl-0 h-full relative basis-full">
-                       <div className="relative w-full h-full"> {/* Wrapper to ensure Image fills this specific slide */}
-                        <Image
-                          src={imageSrc}
-                          alt={`${service.title} - imagine ${index + 1}`}
-                          fill
-                          className="object-cover"
-                          priority={index === 0}
-                        />
-                       </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
-                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
-              </Carousel>
-            ) : (
-              <Image
-                src={service.img}
-                alt={service.title}
-                fill
-                className="object-cover"
-                priority
-              />
+          {/* Left Column: Video, Image Carousel, or Single Image */}
+          <div className="flex flex-col gap-6">
+            {/* Video Player (if videoUrl exists) */}
+            {service.videoUrl && (
+              <div className="shadow-xl">
+                <VideoPlayer
+                  src={service.videoUrl}
+                  poster={service.img}
+                  aspectRatio={service.videoAspectRatio}
+                />
+              </div>
             )}
+
+            {/* Image or Carousel (shown below video or as main media) */}
+            <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-xl bg-muted">
+              {service.images && service.images.length > 0 ? (
+                <Carousel className="w-full h-full">
+                  <CarouselContent className="-ml-0 h-full">
+                    {service.images.map((imageSrc, index) => (
+                      <CarouselItem key={index} className="pl-0 h-full relative basis-full">
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={imageSrc}
+                            alt={`${service.title} - imagine ${index + 1}`}
+                            fill
+                            className="object-cover"
+                            priority={index === 0}
+                          />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
+                  <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
+                </Carousel>
+              ) : (
+                <Image
+                  src={service.img}
+                  alt={service.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              )}
+            </div>
           </div>
 
           {/* Right Column: Content */}

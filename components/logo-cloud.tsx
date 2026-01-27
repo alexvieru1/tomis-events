@@ -5,7 +5,7 @@ import { ProgressiveBlur } from "./ui/progressive-blur";
 const LOGOS = [
   {
     name: "Breeze Mamaia",
-    url: "/images/clienti/breeze-mamaia.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/breeze-mamaia.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,
@@ -13,7 +13,7 @@ const LOGOS = [
   },
   {
     name: "Loft Mamaia",
-    url: "/images/clienti/loft-mamaia.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/loft-mamaia.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,
@@ -21,7 +21,7 @@ const LOGOS = [
   },
   {
     name: "Nuba Mamaia",
-    url: "/images/clienti/nuba.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/nuba.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,
@@ -29,7 +29,7 @@ const LOGOS = [
   },
   {
     name: "Fratelli Beach & Club",
-    url: "/images/clienti/fratelli.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/fratelli.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,
@@ -37,7 +37,7 @@ const LOGOS = [
   },
   {
     name: "Azimuth",
-    url: "/images/clienti/azimuth.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/azimuth.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,
@@ -45,7 +45,7 @@ const LOGOS = [
   },
   {
     name: "Crazy Beach",
-    url: "/images/clienti/crazy-beach.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/crazy-beach.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,
@@ -53,7 +53,7 @@ const LOGOS = [
   },
   {
     name: "EGO Club",
-    url: "/images/clienti/ego-club.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/ego-club.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,
@@ -61,7 +61,7 @@ const LOGOS = [
   },
   {
     name: "Hotel Iaki",
-    url: "/images/clienti/hotel-iaki.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/hotel-iaki.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,
@@ -69,7 +69,7 @@ const LOGOS = [
   },
   {
     name: "Phoenicia Holiday Resort",
-    url: "/images/clienti/phoenicia-holiday-resort.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/phoenicia-holiday-resort.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,
@@ -77,7 +77,7 @@ const LOGOS = [
   },
   {
     name: "Sensation Media Party",
-    url: "/images/clienti/sensation-media-party.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/sensation-media-party.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,
@@ -85,7 +85,7 @@ const LOGOS = [
   },
   {
     name: "Galla Ballroom",
-    url: "/images/clienti/galla-ballroom.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/galla-ballroom.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,
@@ -93,7 +93,7 @@ const LOGOS = [
   },
   {
     name: "Grand Imperial Ballroom",
-    url: "/images/clienti/imperial-ballroom.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/imperial-ballroom.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,
@@ -101,7 +101,7 @@ const LOGOS = [
   },
   {
     name: "Reyna",
-    url: "/images/clienti/reyna.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/reyna.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,
@@ -109,7 +109,7 @@ const LOGOS = [
   },
   {
     name: "La Scoica",
-    url: "/images/clienti/scoica.webp",
+    url: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/clienti/scoica.webp",
     className:
       "h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300",
     width: 262,

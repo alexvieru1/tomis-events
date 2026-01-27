@@ -88,14 +88,14 @@ export default function HeroSection() {
                 </div>
                 <div className="mask-b-from-55% relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
                   <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
-                  <Image className="z-2 border-border/25 aspect-16/11 relative rounded-2xl border" src="/images/hero-section.webp" alt="Hero Image" width={1200} height={640} />
+                  <Image className="z-2 border-border/25 aspect-16/11 relative rounded-2xl border" src="https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/hero-section.webp" alt="Hero Image" width={1200} height={640} />
                   </div>
                 </div>
                 {/* <div className="mx-auto 2xl:max-w-7xl">
                   <div className="perspective-distant pl-8 lg:pl-44">
                     <div className="lg:h-176 rotate-x-20 mask-b-from-90% mask-b-to-100% mask-r-from-75% skew-x-12 pl-6 pt-6">
                       <Image
-                        src="/images/hero.webp"
+                        src="https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/hero.webp"
                         alt="Hero Image"
                         width={2048}
                         height={1357}
@@ -111,7 +111,7 @@ export default function HeroSection() {
                   <div className="bg-background border-border/50 absolute inset-0 mx-auto w-80 -translate-x-3 -translate-y-12 rounded-[2rem] border p-2 [mask-image:linear-gradient(to_bottom,#000_50%,transparent_90%)] sm:-translate-x-6">
                     <div className="relative h-96 overflow-hidden rounded-[1.5rem] border p-2 pb-12 before:absolute before:inset-0 before:bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] before:opacity-50">
                       <Image
-                        src="/images/hero-back.webp"
+                        src="https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/hero-back.webp"
                         alt="Hero Background"
                         fill
                         className="object-cover"
@@ -121,7 +121,7 @@ export default function HeroSection() {
                   <div className="bg-muted dark:bg-background/50 border-border/50 mx-auto w-80 translate-x-4 rounded-[2rem] border p-2 backdrop-blur-3xl [mask-image:linear-gradient(to_bottom,#000_50%,transparent_90%)] sm:translate-x-8">
                     <div className="bg-background space-y-2 overflow-hidden rounded-[1.5rem] border shadow-xl dark:bg-white/5 dark:shadow-black dark:backdrop-blur-3xl">
                       <Image
-                        src="/images/hero-front.webp"
+                        src="https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/hero-front.webp"
                         alt="Hero Front"
                         width={384}
                         height={512}
