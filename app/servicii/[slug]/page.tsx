@@ -1,19 +1,19 @@
-import React from 'react';
-import { notFound } from 'next/navigation';
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { Check } from 'lucide-react';
-import { SERVICII_INTERIOR, SERVICII_EXTERIOR, Serviciu } from '@/lib/services';
-import { Metadata } from 'next';
+import React from "react";
+import { notFound } from "next/navigation";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Check } from "lucide-react";
+import { SERVICII_INTERIOR, SERVICII_EXTERIOR, Serviciu } from "@/lib/services";
+import { Metadata } from "next";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
-import { VideoPlayer } from '@/components/video-player';
+} from "@/components/ui/carousel";
+import { VideoPlayer } from "@/components/video-player";
 
 interface ServicePageProps {
   params: Promise<{
@@ -27,13 +27,15 @@ function getServiceBySlug(slug: string): Serviciu | undefined {
   return allServices.find((service) => service.href === `/servicii/${slug}`);
 }
 
-export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: ServicePageProps): Promise<Metadata> {
   const resolvedParams = await params;
   const service = getServiceBySlug(resolvedParams.slug);
 
   if (!service) {
     return {
-      title: 'Serviciu Inexistent - Tomis Events',
+      title: "Serviciu Inexistent - Tomis Events",
     };
   }
 
@@ -56,57 +58,66 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <div className="container mx-auto px-6">
         {/* Breadcrumb / Back Link */}
         <div className="mb-8">
-          <Button variant="ghost" asChild className="pl-0 hover:bg-transparent hover:text-primary">
+          <Button
+            variant="ghost"
+            asChild
+            className="pl-0 hover:bg-transparent hover:text-primary"
+          >
             <Link href="/servicii">← Înapoi la Servicii</Link>
           </Button>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left Column: Video, Image Carousel, or Single Image */}
-          <div className="flex flex-col gap-6">
-            {/* Video Player (if videoUrl exists) */}
-            {service.videoUrl && (
-              <div className="shadow-xl">
-                <VideoPlayer
-                  src={service.videoUrl}
-                  poster={service.img}
-                  aspectRatio={service.videoAspectRatio}
-                />
+          {/* Left Column: Video (if available) or Image Carousel */}
+          <div className="flex flex-col gap-6 items-center">
+            {service.videoUrl ? (
+              <VideoPlayer
+                src={service.videoUrl}
+                poster={service.videoPoster}
+                aspectRatio={service.videoAspectRatio}
+              />
+            ) : (
+              <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-xl bg-muted">
+                {service.images && service.images.length > 0 ? (
+                  <Carousel className="w-full h-full">
+                    <CarouselContent className="ml-0 h-full">
+                      {service.images.map((imageSrc, index) => (
+                        <CarouselItem
+                          key={index}
+                          className="pl-0 h-full relative basis-full"
+                        >
+                          <div className="relative w-full h-full">
+                            <Image
+                              src={imageSrc}
+                              alt={`${service.title} - imagine ${index + 1}`}
+                              fill
+                              className="object-cover"
+                              priority={index === 0}
+                            />
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
+                    <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
+                  </Carousel>
+                ) : service.img ? (
+                  <Image
+                    src={service.img}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                ) : (
+                  <div className="w-full h-full flex flex-col items-center justify-center bg-zinc-100 text-zinc-400 p-6 text-center">
+                    <span className="text-sm font-medium">
+                      Imagini în curs de actualizare
+                    </span>
+                  </div>
+                )}
               </div>
             )}
-
-            {/* Image or Carousel (shown below video or as main media) */}
-            <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-xl bg-muted">
-              {service.images && service.images.length > 0 ? (
-                <Carousel className="w-full h-full">
-                  <CarouselContent className="-ml-0 h-full">
-                    {service.images.map((imageSrc, index) => (
-                      <CarouselItem key={index} className="pl-0 h-full relative basis-full">
-                        <div className="relative w-full h-full">
-                          <Image
-                            src={imageSrc}
-                            alt={`${service.title} - imagine ${index + 1}`}
-                            fill
-                            className="object-cover"
-                            priority={index === 0}
-                          />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
-                  <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
-                </Carousel>
-              ) : (
-                <Image
-                  src={service.img}
-                  alt={service.title}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              )}
-            </div>
           </div>
 
           {/* Right Column: Content */}
@@ -122,7 +133,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
             {/* Features/Subcategories */}
             <div className="bg-muted/30 p-8 rounded-xl border border-border">
-              <h3 className="text-xl font-semibold text-[#E81ADE] mb-6">Ce include acest serviciu:</h3>
+              <h3 className="text-xl font-semibold text-[#E81ADE] mb-6">
+                Ce include acest serviciu:
+              </h3>
               <ul className="space-y-4">
                 {service.subCategories.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -137,7 +150,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
-              <Button asChild size="lg" className="text-lg px-8 rounded-full bg-[#E81ADE] hover:bg-[#E81ADE]/90">
+              <Button
+                asChild
+                size="lg"
+                className="text-lg px-8 rounded-full bg-[#E81ADE] hover:bg-[#E81ADE]/90"
+              >
                 <Link href="/contact">Cere o Ofertă Personalizată</Link>
               </Button>
             </div>

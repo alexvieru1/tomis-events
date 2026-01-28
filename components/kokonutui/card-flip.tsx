@@ -77,8 +77,9 @@ export default function CardFlip({
                         "rounded-[140px]",
                         "animate-[scale_3s_linear_infinite]",
                         "opacity-0",
-                        "shadow-[0_0_50px_rgba(255,165,0,0.5)]",
-                        "group-hover:animate-[scale_2s_linear_infinite]"
+                        "shadow-[0_0_50px_#E81ADE80]",
+                        "group-hover:animate-[scale_2s_linear_infinite]",
+                        "dark:shadow-[0_0_50px_#E81ADE80]"
                       )}
                       key={i}
                       style={{
@@ -122,14 +123,14 @@ export default function CardFlip({
                     <div
                     className={cn(
                         "absolute -inset-2 rounded-lg transition-opacity duration-300",
-                        "bg-linear-to-br from-orange-500/20 via-orange-500/10 to-transparent"
+                        "bg-linear-to-br from-[#E81ADE]/20 via-[#E81ADE]/10 to-transparent"
                     )}
                     />
                 )}
                 <Repeat2
                   className={cn(
                     "group-hover/icon:-rotate-12 relative z-10 h-4 w-4 transition-transform duration-300 group-hover/icon:scale-110",
-                    image ? "text-white" : "text-orange-500"
+                    image ? "text-white" : "text-[#E81ADE]"
                   )}
                 />
               </div>
@@ -227,23 +228,23 @@ export default function CardFlip({
                   "transition-all duration-300",
                   "bg-linear-to-r from-zinc-100 via-zinc-100 to-zinc-100",
                   "dark:from-zinc-800 dark:via-zinc-800 dark:to-zinc-800",
-                  "hover:from-0% hover:from-orange-500/10 hover:via-100% hover:via-orange-500/5 hover:to-100% hover:to-transparent",
-                  "dark:hover:from-0% dark:hover:from-orange-500/20 dark:hover:via-100% dark:hover:via-orange-500/10 dark:hover:to-100% dark:hover:to-transparent",
+                  "hover:from-0% hover:from-[#E81ADE]/10 hover:via-100% hover:via-[#E81ADE]/5 hover:to-100% hover:to-transparent",
+                  "dark:hover:from-0% dark:hover:from-[#E81ADE]/20 dark:hover:via-100% dark:hover:via-[#E81ADE]/10 dark:hover:to-100% dark:hover:to-transparent",
                   "hover:scale-[1.02] hover:cursor-pointer"
                 )}
               >
-                <span className="font-medium text-sm text-zinc-900 transition-colors duration-300 group-hover/start:text-orange-600 dark:text-white dark:group-hover/start:text-orange-400">
+                <span className="font-medium text-sm text-zinc-900 transition-colors duration-300 group-hover/start:text-[#E81ADE] dark:text-white dark:group-hover/start:text-[#E81ADE]">
                   {actionText}
                 </span>
                 <div className="group/icon relative">
                   <div
                     className={cn(
                       "absolute -inset-1.5 rounded-lg transition-all duration-300",
-                      "bg-linear-to-br from-orange-500/20 via-orange-500/10 to-transparent",
+                      "bg-linear-to-br from-[#E81ADE]/20 via-[#E81ADE]/10 to-transparent",
                       "scale-90 opacity-0 group-hover/start:scale-100 group-hover/start:opacity-100"
                     )}
                   />
-                  <ArrowRight className="relative z-10 h-4 w-4 text-orange-500 transition-all duration-300 group-hover/start:translate-x-0.5 group-hover/start:scale-110" />
+                  <ArrowRight className="relative z-10 h-4 w-4 text-[#E81ADE] transition-all duration-300 group-hover/start:translate-x-0.5 group-hover/start:scale-110" />
                 </div>
               </div>
             )}
@@ -256,17 +257,17 @@ export default function CardFlip({
                     0% {
                         transform: scale(2);
                         opacity: 0;
-                        box-shadow: 0px 0px 50px rgba(255, 165, 0, 0.5);
+                        box-shadow: 0px 0px 50px rgba(232, 26, 222, 0.5);
                     }
                     50% {
                         transform: translate(0px, -5px) scale(1);
                         opacity: 1;
-                        box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.5);
+                        box-shadow: 0px 8px 20px rgba(232, 26, 222, 0.5);
                     }
                     100% {
                         transform: translate(0px, 5px) scale(0.1);
                         opacity: 0;
-                        box-shadow: 0px 10px 20px rgba(255, 165, 0, 0);
+                        box-shadow: 0px 10px 20px rgba(232, 26, 222, 0);
                     }
                 }
             `}</style>

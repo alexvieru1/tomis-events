@@ -5,9 +5,10 @@ export interface Serviciu {
   href: string;
   descriere: string;
   about?: string;
-  img: string;
+  img?: string;
   images?: string[];
   videoUrl?: string;
+  videoPoster?: string;
   videoAspectRatio?: VideoAspectRatio;
   subCategories: string[];
 }
@@ -72,7 +73,7 @@ export const SERVICII_INTERIOR: Serviciu[] = [
     href: "/servicii/artificii-ring-rotative",
     descriere: "Show dinamic de scântei rotative ce oferă o perspectivă vizuală unică.",
     about: "Dacă vrei să ieși din tipare, artificiile rotative aduc un dinamism aparte ringului de dans. Dispozitivele speciale rotesc vulcanii de scântei reci la viteze controlate, formând cercuri de foc spectaculoase în jurul vostru. Este un efect modern, controlat wireless, care surprinde plăcut prin fluiditatea și strălucirea sa.",
-    img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/placeholder/artificii-ring-rotative.jpg",
+    // img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/placeholder/artificii-ring-rotative.jpg",
     subCategories: [
       "Efect de rotație 360°",
       "Sincronizare wireless",
@@ -199,7 +200,7 @@ export const SERVICII_EXTERIOR: Serviciu[] = [
     href: "/servicii/scris-pirotehnic",
     descriere: "Numele voastre sau mesaje speciale luminate prin flăcări controlate.",
     about: "Personalizează noaptea cu un mesaj arzător. Scrisul pirotehnic permite afișarea inițialelor, a numelor sau a unor simboluri precum inima, folosind elemente care se aprind simultan. Este un moment de mare impact emoțional, ideal pentru cereri în căsătorie sau ca fundal pentru ședința foto de noapte a mirilor.",
-    img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/placeholder/scris-pirotehnic.jpg",
+    // img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/placeholder/scris-pirotehnic.jpg",
     subCategories: [
       "Inițiale sau nume complet",
       "Inimă aprinsă inclusă",
@@ -211,7 +212,7 @@ export const SERVICII_EXTERIOR: Serviciu[] = [
     href: "/servicii/sori-rotitori",
     descriere: "Efecte pirotehnice dinamice la sol sub formă de sori de foc strălucitori.",
     about: "Sorii rotitori sunt elemente de pirotehnie la sol care creează o dinamică circulară spectaculoasă. Aceștia se rotesc cu viteză, aruncând scântei aurii sau argintii într-un design hipnotic. Sunt ideali pentru a flanca un culoar de primire sau pentru a completa un foc de artificii principal cu efecte de joasă înălțime.",
-    img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/placeholder/sori-rotitori.jpg",
+    // img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/placeholder/sori-rotitori.jpg",
     subCategories: [
       "Efecte statice și rotative",
       "Înălțime 2-4 metri",
@@ -248,6 +249,9 @@ export const SERVICII_EXTERIOR: Serviciu[] = [
     descriere: "Show intens de fum colorat și sunet, creat pentru evenimente de zi.",
     about: "Cine spune că artificiile sunt doar pentru noapte? Spectacolul de zi se bazează pe coloane de fum colorat (daylight smoke) și efecte sonore ritmate. Este o alegere excelentă pentru nunțile în aer liber, evenimente sportive sau petreceri de tip garden party, oferind un impact vizual vibrant sub lumina soarelui.",
     img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/artificii-zi.webp",
+    videoUrl: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/gender-reveal.mov",
+    videoPoster: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/extinctoare-fumigene-poster.webp",
+    videoAspectRatio: "9:16",
     subCategories: [
       "Fum colorat dens",
       "Efecte sonore (bombe)",
@@ -259,7 +263,7 @@ export const SERVICII_EXTERIOR: Serviciu[] = [
     href: "/servicii/extinctoare-fumigene",
     descriere: "Efecte de fum dens colorat, ideale pentru ședințe foto spectaculoase.",
     about: "Pentru amintiri pline de culoare, fumigenele de mână sau tip 'extinctor' oferă un nor dens și cromatic în fundal. Sunt extrem de populare pentru ședințele foto 'Trash the Dress' sau pentru momentele de grup cu prietenii. Culorile sunt intense și persistă suficient pentru a surprinde cadrul perfect.",
-    img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/placeholder/extinctoare-fumigene.jpg",
+    img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/extinctoare-fumigene.webp",
     subCategories: [
       "Timp ardere 60-90 sec",
       "Activare prin tragere",
