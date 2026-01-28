@@ -22,10 +22,10 @@ export function WebsiteNavbar() {
       name: "Pachete",
       link: "/pachete",
     },
-    {
-      name: "Evenimente",
-      link: "/evenimente",
-    },
+    // {
+    //   name: "Evenimente",
+    //   link: "/evenimente",
+    // },
     {
       name: "Contact",
       link: "/contact",

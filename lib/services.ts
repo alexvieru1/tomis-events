@@ -20,6 +20,9 @@ export const SERVICII_INTERIOR: Serviciu[] = [
     descriere: "Efect spectaculos de nori joși pentru un dans al mirilor de poveste.",
     about: "Transformă valsul mirilor într-un moment de basm cu ajutorul gheții carbonice. Mașina de fum greu produce un strat dens de nori joși care nu se ridică, oferind senzația că dansați pe cer. Efectul este 100% sigur, nu are miros și nu declanșează senzorii de fum, fiind completat de prezența unui tehnician care asigură densitatea optimă pe toată durata piesei.",
     img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/fum-greu.webp",
+    videoUrl:"https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/videos/fum-greu-baloane.MOV",
+    videoAspectRatio:"9:16",
+    videoPoster:"https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/fum-greu-baloane-poster.webp",
     subCategories: [
       "Gheață carbonică inclusă",
       "Efect pe durata întregului vals",
@@ -110,6 +113,9 @@ export const SERVICII_INTERIOR: Serviciu[] = [
     descriere: "Baloane pline cu ceață care oferă un efect vizual inedit și interactiv.",
     about: "Un efect de ultimă generație care combină fragilitatea baloanelor de săpun cu misterul fumului. La spargere, aceste baloane eliberează un mic nor de ceață, creând o scenă interactivă și ludică. Este un serviciu extrem de apreciat atât de copii, cât și de adulți, oferind un farmec aparte ringului de dans.",
     img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/masina-baloane-fum.webp",
+    videoUrl:"https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/videos/fum-greu-baloane.MOV",
+    videoAspectRatio:"9:16",
+    videoPoster:"https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/fum-greu-baloane-poster.webp",
     subCategories: [
       "Efect de ceață la spargere",
       "Luminat LED inclus",
@@ -249,7 +255,7 @@ export const SERVICII_EXTERIOR: Serviciu[] = [
     descriere: "Show intens de fum colorat și sunet, creat pentru evenimente de zi.",
     about: "Cine spune că artificiile sunt doar pentru noapte? Spectacolul de zi se bazează pe coloane de fum colorat (daylight smoke) și efecte sonore ritmate. Este o alegere excelentă pentru nunțile în aer liber, evenimente sportive sau petreceri de tip garden party, oferind un impact vizual vibrant sub lumina soarelui.",
     img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/artificii-zi.webp",
-    videoUrl: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/gender-reveal.mov",
+    videoUrl: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/videos/gender-reveal.mov",
     videoPoster: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/extinctoare-fumigene-poster.webp",
     videoAspectRatio: "9:16",
     subCategories: [
@@ -264,6 +270,9 @@ export const SERVICII_EXTERIOR: Serviciu[] = [
     descriere: "Efecte de fum dens colorat, ideale pentru ședințe foto spectaculoase.",
     about: "Pentru amintiri pline de culoare, fumigenele de mână sau tip 'extinctor' oferă un nor dens și cromatic în fundal. Sunt extrem de populare pentru ședințele foto 'Trash the Dress' sau pentru momentele de grup cu prietenii. Culorile sunt intense și persistă suficient pentru a surprinde cadrul perfect.",
     img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/extinctoare-fumigene.webp",
+    videoUrl: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/videos/gender-reveal.mov",
+    videoPoster: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/extinctoare-fumigene-poster.webp",
+    videoAspectRatio: "9:16",
     subCategories: [
       "Timp ardere 60-90 sec",
       "Activare prin tragere",

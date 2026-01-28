@@ -55,9 +55,9 @@ const Footer = () => {
               <li>
                 <Link href="/pachete" className="hover:text-primary transition-colors">Pachete</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/evenimente" className="hover:text-primary transition-colors">Evenimente</Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/contact" className="hover:text-primary transition-colors">Contact</Link>
               </li>
@@ -108,9 +108,10 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-zinc-500">
              <p>&copy; {currentYear} Tomis Events. Toate drepturile rezervate.</p>
-             <div className="flex gap-6">
-                <Link href="#" className="hover:text-primary transition-colors">Termeni și Condiții</Link>
-                <Link href="#" className="hover:text-primary transition-colors">Politica de Confidențialitate</Link>
+             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                <Link href="/termeni-conditii" className="hover:text-primary transition-colors">Termeni și Condiții</Link>
+                <Link href="/politica-confidentialitate" className="hover:text-primary transition-colors">Politica de Confidențialitate</Link>
+                <Link href="/politica-cookies" className="hover:text-primary transition-colors">Politica de Cookies</Link>
              </div>
         </div>
       </div>

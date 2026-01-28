@@ -9,6 +9,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { cn } from "@/lib/utils"
 import { format } from "date-fns"
 import { ro } from "date-fns/locale"
+import Link from "next/link"
 
 export function ContactForm() {
     const [loading, setLoading] = useState(false);
@@ -142,9 +143,30 @@ export function ContactForm() {
                     </div>
                 </div>
 
-                <Button 
-                    type="submit" 
-                    size="lg" 
+                <div className="flex items-start gap-3">
+                    <input
+                        required
+                        type="checkbox"
+                        id="gdpr"
+                        name="gdpr"
+                        className="mt-1 h-4 w-4 rounded border-gray-300 text-[#E81ADE] focus:ring-[#E81ADE]"
+                    />
+                    <label htmlFor="gdpr" className="text-sm text-muted-foreground">
+                        Am citit și sunt de acord cu{' '}
+                        <Link href="/politica-confidentialitate" className="text-[#E81ADE] hover:underline" target="_blank">
+                            Politica de Confidențialitate
+                        </Link>
+                        {' '}și{' '}
+                        <Link href="/termeni-conditii" className="text-[#E81ADE] hover:underline" target="_blank">
+                            Termenii și Condițiile
+                        </Link>
+                        . *
+                    </label>
+                </div>
+
+                <Button
+                    type="submit"
+                    size="lg"
                     className="w-full bg-[#E81ADE] hover:bg-[#E81ADE]/90 text-white rounded-full text-lg h-12"
                     disabled={loading}
                 >

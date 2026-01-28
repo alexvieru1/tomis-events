@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import { WebsiteNavbar } from "@/components/navbar";
 import Footer from "@/components/footer";
+import { CookieConsent } from "@/components/cookie-consent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,10 +39,10 @@ export const metadata: Metadata = {
     description: 'Servicii complete pentru evenimente memorabile în Constanța. Fum greu, artificii, foto-video și multe altele.',
     images: [
       {
-        url: '/images/hero.webp',
+        url: '/opengraph-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Tomis Events - Organizare Evenimente',
+        alt: 'Tomis Events - Organizare Evenimente Constanța',
       },
     ],
   },
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tomis Events - Organizare Evenimente Constanța',
     description: 'Transformăm evenimentele obișnuite în amintiri extraordinare.',
-    images: ['/images/hero.webp'],
+    images: ['/twitter-image.jpg'],
   },
   robots: {
     index: true,
@@ -70,13 +71,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ro">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
       >
         <WebsiteNavbar />
         <div className="pt-24">{children}</div>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );
