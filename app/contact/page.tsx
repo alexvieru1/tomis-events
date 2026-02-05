@@ -89,13 +89,13 @@ const Contact = () => {
                     <p className="text-sm text-muted-foreground mb-4">Ne găsești și pe rețelele sociale:</p>
                     <div className="flex gap-4">
                         {/* Example Social Buttons */}
-                        <Link href="https://facebook.com" target="_blank" className="p-3 bg-white border border-gray-100 rounded-xl hover:border-[#E81ADE]/30 hover:text-[#E81ADE] transition-colors shadow-sm">
+                        <Link href="https://www.facebook.com/evenimentul.tau.7" target="_blank" className="p-3 bg-white border border-gray-100 rounded-xl hover:border-[#E81ADE]/30 hover:text-[#E81ADE] transition-colors shadow-sm">
                             <span className="font-bold">Facebook</span>
                         </Link>
-                        <Link href="https://instagram.com" target="_blank" className="p-3 bg-white border border-gray-100 rounded-xl hover:border-[#E81ADE]/30 hover:text-[#E81ADE] transition-colors shadow-sm">
+                        <Link href="https://www.instagram.com/artificii_constanta" target="_blank" className="p-3 bg-white border border-gray-100 rounded-xl hover:border-[#E81ADE]/30 hover:text-[#E81ADE] transition-colors shadow-sm">
                             <span className="font-bold">Instagram</span>
                         </Link>
-                         <Link href="https://tiktok.com" target="_blank" className="p-3 bg-white border border-gray-100 rounded-xl hover:border-[#E81ADE]/30 hover:text-[#E81ADE] transition-colors shadow-sm">
+                         <Link href="https://www.tiktok.com/@artificii_constanta" target="_blank" className="p-3 bg-white border border-gray-100 rounded-xl hover:border-[#E81ADE]/30 hover:text-[#E81ADE] transition-colors shadow-sm">
                             <span className="font-bold">TikTok</span>
                         </Link>
                     </div>
