@@ -53,6 +53,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
     notFound();
   }
 
+  const displayImages = service.images && service.images.length > 10
+    ? [...service.images].reverse()
+    : service.images;
+
   return (
     <main className="min-h-screen lg:pt-10 pb-16">
       <div className="container mx-auto px-6">
@@ -81,10 +85,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
             ) : (
               // Case 2: No Video - Show Carousel/Image in main spot
               <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-xl bg-muted">
-                {service.images && service.images.length > 0 ? (
+                {displayImages && displayImages.length > 0 ? (
                   <Carousel className="w-full h-full">
                     <CarouselContent className="ml-0 h-full">
-                      {service.images.map((imageSrc, index) => (
+                      {displayImages.map((imageSrc, index) => (
                         <CarouselItem
                           key={index}
                           className="pl-0 h-full relative basis-full"
@@ -165,13 +169,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
 
         {/* Bottom Section: Image Gallery (Only if Video exists AND there are images) */}
-        {service.videoUrl && service.images && service.images.length > 0 && (
+        {service.videoUrl && displayImages && displayImages.length > 0 && (
           <div className="w-full space-y-8">
             <h2 className="text-3xl font-heading font-bold text-center mb-8">
               Galerie Foto
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {service.images.map((imageSrc, index) => (
+              {displayImages.map((imageSrc, index) => (
                 <div
                   key={index}
                   className="relative aspect-square overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300"

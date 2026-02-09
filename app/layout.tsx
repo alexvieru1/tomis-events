@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: '%s | Tomis Events'
   },
   description: 'Transformăm evenimentele obișnuite în amintiri extraordinare. Peste 20 de ani de experiență în crearea momentelor magice în Constanța și împrejurimi. Servicii premium: fum greu, artificii, cabină foto.',
-  keywords: ['evenimente constanta', 'organizare nunti', 'fum greu', 'artificii', 'cabina foto', 'nunta perfecta', 'tomis events'],
+  keywords: ['evenimente constanta', 'organizare nunti', 'fum greu', 'artificii', 'nunta perfecta', 'tomis events'],
   authors: [{ name: 'Tomis Events' }],
   creator: 'Tomis Events',
   openGraph: {
