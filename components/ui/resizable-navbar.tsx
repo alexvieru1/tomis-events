@@ -10,8 +10,11 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-import React, { useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+import React, { createContext, useContext, useRef, useState } from "react";
 
+const NavbarContext = createContext({ heroTransparent: false });
+const useNavbarContext = () => useContext(NavbarContext);
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -53,6 +56,8 @@ interface MobileNavMenuProps {
 
 export const Navbar = ({ children, className }: NavbarProps) => {
   const ref = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const isHeroPage = pathname === "/";
   const { scrollY } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -67,21 +72,24 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     }
   });
 
+  const heroTransparent = isHeroPage && !visible;
+
   return (
-    <motion.div
-      ref={ref}
-      // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-      className={cn("fixed inset-x-0 top-6 z-40 w-full", className)}
-    >
-      {React.Children.map(children, (child) =>
-        React.isValidElement(child)
-          ? React.cloneElement(
-              child as React.ReactElement<{ visible?: boolean }>,
-              { visible },
-            )
-          : child,
-      )}
-    </motion.div>
+    <NavbarContext.Provider value={{ heroTransparent }}>
+      <motion.div
+        ref={ref}
+        className={cn("fixed inset-x-0 top-6 z-40 w-full", className)}
+      >
+        {React.Children.map(children, (child) =>
+          React.isValidElement(child)
+            ? React.cloneElement(
+                child as React.ReactElement<{ visible?: boolean }>,
+                { visible },
+              )
+            : child,
+        )}
+      </motion.div>
+    </NavbarContext.Provider>
   );
 };
 
@@ -116,13 +124,15 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
 };
 
 export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
+  const { heroTransparent } = useNavbarContext();
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium transition duration-200 lg:flex lg:space-x-2",
+        heroTransparent ? "text-white/90 hover:text-white" : "text-zinc-600 hover:text-zinc-800",
         className,
       )}
     >
@@ -130,14 +140,20 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+          className={cn(
+            "relative px-4 py-2 transition-colors duration-300",
+            heroTransparent ? "text-white/90 dark:text-white" : "text-neutral-600 dark:text-neutral-300",
+          )}
           key={`link-${idx}`}
           href={item.link}
         >
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
+              className={cn(
+                "absolute inset-0 h-full w-full rounded-full",
+                heroTransparent ? "bg-white/15" : "bg-gray-100 dark:bg-neutral-800",
+              )}
             />
           )}
           <span className="relative z-20">{item.name}</span>
@@ -224,18 +240,24 @@ export const MobileNavToggle = ({
   isOpen: boolean;
   onClick: () => void;
 }) => {
+  const { heroTransparent } = useNavbarContext();
+  const iconClass = cn(
+    "transition-colors duration-300",
+    heroTransparent ? "text-white" : "text-black dark:text-white",
+  );
   return isOpen ? (
-    <IconX className="text-black dark:text-white" onClick={onClick} />
+    <IconX className={iconClass} onClick={onClick} />
   ) : (
-    <IconMenu2 className="text-black dark:text-white" onClick={onClick} />
+    <IconMenu2 className={iconClass} onClick={onClick} />
   );
 };
 
 export const NavbarLogo = () => {
+  const { heroTransparent } = useNavbarContext();
   return (
     <Link
       href="/"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
+      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal"
     >
       <Image
         src="https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/logo.png"
@@ -243,7 +265,10 @@ export const NavbarLogo = () => {
         width={30}
         height={30}
       />
-      <span className="font-medium text-black dark:text-white">Tomis Events</span>
+      <span className={cn(
+        "font-medium transition-colors duration-300",
+        heroTransparent ? "text-white" : "text-black dark:text-white",
+      )}>Tomis Events</span>
     </Link>
   );
 };
