@@ -67,16 +67,19 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left Column: Video (if available) or Image Carousel */}
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+          {/* Left Column: Primary Media */}
           <div className="flex flex-col gap-6 items-center">
             {service.videoUrl ? (
+              // Case 1: Video is available - It takes the main spot
               <VideoPlayer
                 src={service.videoUrl}
                 poster={service.videoPoster}
                 aspectRatio={service.videoAspectRatio}
               />
             ) : (
+              // Case 2: No Video - Show Carousel/Image in main spot
               <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-xl bg-muted">
                 {service.images && service.images.length > 0 ? (
                   <Carousel className="w-full h-full">
@@ -160,6 +163,30 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </div>
           </div>
         </div>
+
+        {/* Bottom Section: Image Gallery (Only if Video exists AND there are images) */}
+        {service.videoUrl && service.images && service.images.length > 0 && (
+          <div className="w-full space-y-8">
+            <h2 className="text-3xl font-heading font-bold text-center mb-8">
+              Galerie Foto
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {service.images.map((imageSrc, index) => (
+                <div
+                  key={index}
+                  className="relative aspect-square overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300"
+                >
+                  <Image
+                    src={imageSrc}
+                    alt={`${service.title} - galerie ${index + 1}`}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </main>
   );

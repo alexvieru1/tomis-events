@@ -76,7 +76,7 @@ export const SERVICII_INTERIOR: Serviciu[] = [
     href: "/servicii/artificii-ring-rotative",
     descriere: "Show dinamic de scântei rotative ce oferă o perspectivă vizuală unică.",
     about: "Dacă vrei să ieși din tipare, artificiile rotative aduc un dinamism aparte ringului de dans. Dispozitivele speciale rotesc vulcanii de scântei reci la viteze controlate, formând cercuri de foc spectaculoase în jurul vostru. Este un efect modern, controlat wireless, care surprinde plăcut prin fluiditatea și strălucirea sa.",
-    // img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/placeholder/artificii-ring-rotative.jpg",
+    img: "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/artificii-ring-rotative.webp",
     subCategories: [
       "Efect de rotație 360°",
       "Sincronizare wireless",
@@ -195,6 +195,9 @@ export const SERVICII_EXTERIOR: Serviciu[] = [
       "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/carusel/artificii-exterior-8.webp",
       "https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/carusel/artificii-exterior-9.webp",
     ],
+    videoUrl:"https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/videos/artificii-exterior.mp4",
+    videoAspectRatio:"16:9",
+    videoPoster:"https://pub-039f9033d8464e8d933b76f3820fd6c0.r2.dev/images/servicii/CleanShot%202026-02-09%20at%2009.37.04%402x.png",
     subCategories: [
       "Pachete 3-10 minute",
       "Sincronizare pe muzică",
